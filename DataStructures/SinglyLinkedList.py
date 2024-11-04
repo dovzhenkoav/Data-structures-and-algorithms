@@ -20,7 +20,7 @@ class SinglyLinkedList:
         self.length = 0
 
     def __str__(self):
-        output = 'DataStructures('
+        output = 'SinglyLinkedList('
         current = self.head
         if not current:
             output += ')'
