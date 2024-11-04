@@ -1,23 +1,23 @@
 import pytest
 
-from SinglyLinkedList import SinglyLinkedList
+from DataStructures import SinglyLinkedList
 
 
 def test_create():
     llst = SinglyLinkedList()
-    assert str(llst) == 'SinglyLinkedList()'
+    assert str(llst) == 'DataStructures()'
 
 
 def test_append():
     llst = SinglyLinkedList()
     for i in range(10):
         llst.append(i)
-    assert str(llst) == 'SinglyLinkedList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)'
+    assert str(llst) == 'DataStructures(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)'
     llst = SinglyLinkedList()
     llst.append(None)
     llst.append(2.4)
     llst.append('test')
-    assert str(llst) == 'SinglyLinkedList(None, 2.4, test)'
+    assert str(llst) == 'DataStructures(None, 2.4, test)'
 
 
 def test_len():
@@ -48,11 +48,11 @@ def test_insert():
     for i in range(3):
         llst.append(i)
     llst.insert(0, 9)
-    assert str(llst) == 'SinglyLinkedList(9, 0, 1, 2)'
+    assert str(llst) == 'DataStructures(9, 0, 1, 2)'
     llst.insert(1, 9)
-    assert str(llst) == 'SinglyLinkedList(9, 9, 0, 1, 2)'
+    assert str(llst) == 'DataStructures(9, 9, 0, 1, 2)'
     llst.insert(4, 9)
-    assert str(llst) == 'SinglyLinkedList(9, 9, 0, 1, 9, 2)'
+    assert str(llst) == 'DataStructures(9, 9, 0, 1, 9, 2)'
     with pytest.raises(IndexError):
         llst.insert(10, 9)
     with pytest.raises(IndexError):
@@ -64,11 +64,11 @@ def test_delete():
     for i in range(10):
         llst.append(i)
     llst.remove(0)
-    assert str(llst) == 'SinglyLinkedList(1, 2, 3, 4, 5, 6, 7, 8, 9)'
+    assert str(llst) == 'DataStructures(1, 2, 3, 4, 5, 6, 7, 8, 9)'
     llst.remove(2)
-    assert str(llst) == 'SinglyLinkedList(1, 2, 4, 5, 6, 7, 8, 9)'
+    assert str(llst) == 'DataStructures(1, 2, 4, 5, 6, 7, 8, 9)'
     llst.remove(7)
-    assert str(llst) == 'SinglyLinkedList(1, 2, 4, 5, 6, 7, 8)'
+    assert str(llst) == 'DataStructures(1, 2, 4, 5, 6, 7, 8)'
     with pytest.raises(IndexError):
         llst.remove(10)
 

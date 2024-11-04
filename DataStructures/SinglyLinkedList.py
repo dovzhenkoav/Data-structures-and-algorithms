@@ -20,7 +20,7 @@ class SinglyLinkedList:
         self.length = 0
 
     def __str__(self):
-        output = 'SinglyLinkedList('
+        output = 'DataStructures('
         current = self.head
         if not current:
             output += ')'
@@ -38,7 +38,7 @@ class SinglyLinkedList:
 
     def __getitem__(self, index):
         if (index > self.length - 1) or (index < 0):
-            raise IndexError('SinglyLinkedList index out of range')
+            raise IndexError('DataStructures index out of range')
 
         i = 0
         current = self.head
@@ -70,7 +70,7 @@ class SinglyLinkedList:
 
     def insert(self, index, data):
         if (index > self.length - 1) or (index < 0):
-            raise IndexError('SinglyLinkedList index out of range')
+            raise IndexError('DataStructures index out of range')
         self.length += 1
 
         if index == 0:
@@ -92,7 +92,7 @@ class SinglyLinkedList:
 
     def remove(self, index):
         if (index > self.length - 1) or (index < 0):
-            raise IndexError('SinglyLinkedList index out of range')
+            raise IndexError('DataStructures index out of range')
         self.length -= 1
 
         if index == 0:
